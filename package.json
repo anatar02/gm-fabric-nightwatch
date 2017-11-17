@@ -1,14 +1,18 @@
 {
-  "name": "nightwatch-browserstack",
+  "name": "gm-fabric-nightwatch",
   "version": "0.1.0",
-  "readme": "Nightwatch Integration with [BrowserStack](https://www.browserstack.com)",
-  "description": "Selenium examples for Nightwatch and BrowserStack Automate",
+  "readme":
+    "A Fracking Friday Investigation of how to perform end-to-end testing of [Grey Matter Fabric Dashboard](https://github.com/DecipherNow/gm-fabric-dashboard) via [Mocha](https://mochajs.org/), [Nightwatch](http://nightwatchjs.org/), and [BrowserStack](https://www.browserstack.com/)",
+  "description":
+    "end-to-end testing of Grey Matter Fabric Dashboard via Mocha, Nightwatch, and [BrowserStack]",
   "scripts": {
     "test": "npm run single && npm run local && npm run parallel",
     "single": "./node_modules/.bin/nightwatch -c conf/single.conf.js",
     "local": "node scripts/local.runner.js -c conf/local.conf.js",
-    "parallel": "./node_modules/.bin/nightwatch -c conf/parallel.conf.js -e chrome,firefox,safari,ie",
-    "parallel_local": "node scripts/local.runner.js -c conf/parallel_local.conf.js -e chrome,firefox,safari",
+    "parallel":
+      "./node_modules/.bin/nightwatch -c conf/parallel.conf.js -e chrome,firefox,safari,ie",
+    "parallel_local":
+      "node scripts/local.runner.js -c conf/parallel_local.conf.js -e chrome61Win,chrome62Win,chrome61Mac,chrome62Win,firefox55Win,firefox56Win,firefox55Mac,firefox56Mac,safari10,safari11,ie11,edge15,edge16",
     "suite": "./node_modules/.bin/nightwatch -c conf/suite.conf.js"
   },
   "repository": {
